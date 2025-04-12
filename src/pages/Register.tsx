@@ -1,7 +1,7 @@
 
 import React from 'react';
 import RegisterForm from '@/components/auth/RegisterForm';
-import { Flask } from 'lucide-react';
+import { TestTube } from 'lucide-react';
 
 const Register: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Register: React.FC = () => {
         <div className="text-center mb-6">
           <div className="flex justify-center mb-4">
             <div className="bg-labcenter-purple rounded-full p-3">
-              <Flask className="h-8 w-8 text-white" />
+              <TestTube className="h-8 w-8 text-white" />
             </div>
           </div>
           <h1 className="text-3xl font-bold text-labcenter-purple mb-2">LabCenter</h1>

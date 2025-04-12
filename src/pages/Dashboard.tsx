@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import BottomNavigation from '@/components/layout/BottomNavigation';
 import DashboardCard from '@/components/dashboard/DashboardCard';
 import { Button } from '@/components/ui/button';
-import { Calendar, Flask, Bell, User, Clipboard, Search, Activity } from 'lucide-react';
+import { Calendar, TestTube, Bell, User, Clipboard, Search, Activity } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
   const userName = "Juan"; // TODO: Get from auth
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
           <DashboardCard
             title="Resultados de laboratorio"
             description="Accede a tus análisis recientes"
-            icon={<Flask className="h-6 w-6" />}
+            icon={<TestTube className="h-6 w-6" />}
             path="/test-results"
             color="blue"
           />
