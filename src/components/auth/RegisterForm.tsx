@@ -14,6 +14,8 @@ const RegisterForm: React.FC = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
+    dni: '',
+    phoneNumber: '',
     password: '',
     confirmPassword: '',
     showPassword: false,
@@ -41,6 +43,25 @@ const RegisterForm: React.FC = () => {
       toast({
         title: "Error en el registro",
         description: "Las contraseñas no coinciden",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Validate DNI and phone number
+    if (!/^\d{8}$/.test(formState.dni)) {
+      toast({
+        title: "Error en el registro",
+        description: "El DNI debe contener 8 dígitos",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    if (!/^\d{9}$/.test(formState.phoneNumber)) {
+      toast({
+        title: "Error en el registro",
+        description: "El número de celular debe contener 9 dígitos",
         variant: "destructive",
       });
       return;
@@ -95,6 +116,38 @@ const RegisterForm: React.FC = () => {
           value={formState.email}
           onChange={handleInputChange}
           required
+          className="form-input"
+        />
+      </div>
+      
+      <div className="space-y-2">
+        <Label htmlFor="dni">DNI</Label>
+        <Input
+          id="dni"
+          name="dni"
+          type="text"
+          placeholder="12345678"
+          value={formState.dni}
+          onChange={handleInputChange}
+          required
+          maxLength={8}
+          pattern="\d{8}"
+          className="form-input"
+        />
+      </div>
+      
+      <div className="space-y-2">
+        <Label htmlFor="phoneNumber">Número de celular</Label>
+        <Input
+          id="phoneNumber"
+          name="phoneNumber"
+          type="tel"
+          placeholder="987654321"
+          value={formState.phoneNumber}
+          onChange={handleInputChange}
+          required
+          maxLength={9}
+          pattern="\d{9}"
           className="form-input"
         />
       </div>
