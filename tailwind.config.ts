@@ -65,14 +65,14 @@ export default {
 				},
 				labcenter: {
 					purple: {
-						DEFAULT: '#9b87f5',
-						dark: '#6E59A5',
-						light: '#E5DEFF',
+						DEFAULT: '#ea384c',
+						dark: '#c91c30',
+						light: '#fde7ea',
 					},
 					gray: {
 						DEFAULT: '#8E9196',
 						dark: '#1A1F2C',
-						light: '#F1F0FB',
+						light: '#FFF4F5',
 					}
 				}
 			},
