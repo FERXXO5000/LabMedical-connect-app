@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, TestTube, Bell, User, Clipboard, Search, Activity } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
-  const userName = "Juan"; // TODO: Get from auth
+  const userName = "Jacky"; // Changed from "Juan" to "Jacky"
   
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
