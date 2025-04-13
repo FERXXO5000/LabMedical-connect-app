@@ -26,6 +26,13 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/ui/tabs';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 interface LabTest {
   id: string;
@@ -154,38 +161,23 @@ const LaboratoryTests: React.FC = () => {
               <TabsTrigger value="view">Vista</TabsTrigger>
             </TabsList>
             <TabsContent value="filters" className="space-y-4">
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <p className="text-sm font-medium mb-2">Categoría</p>
-                  <select 
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full p-2 border rounded-md text-sm"
-                  >
+              <div>
+                <p className="text-sm font-medium mb-2">Categoría</p>
+                <Select
+                  value={selectedCategory}
+                  onValueChange={(value) => setSelectedCategory(value)}
+                >
+                  <SelectTrigger className="w-full text-sm">
+                    <SelectValue placeholder="Seleccione categoría" />
+                  </SelectTrigger>
+                  <SelectContent>
                     {categories.map(category => (
-                      <option key={category} value={category}>
+                      <SelectItem key={category} value={category}>
                         {category === 'all' ? 'Todas las categorías' : category}
-                      </option>
+                      </SelectItem>
                     ))}
-                  </select>
-                </div>
-                
-                <div>
-                  <p className="text-sm font-medium mb-2">Requisito de ayuno</p>
-                  <select 
-                    value={fastingFilter === null ? 'all' : fastingFilter ? 'yes' : 'no'}
-                    onChange={(e) => {
-                      if (e.target.value === 'all') setFastingFilter(null);
-                      else if (e.target.value === 'yes') setFastingFilter(true);
-                      else setFastingFilter(false);
-                    }}
-                    className="w-full p-2 border rounded-md text-sm"
-                  >
-                    <option value="all">Todos</option>
-                    <option value="yes">Requiere ayuno</option>
-                    <option value="no">No requiere ayuno</option>
-                  </select>
-                </div>
+                  </SelectContent>
+                </Select>
               </div>
             </TabsContent>
             <TabsContent value="view">
