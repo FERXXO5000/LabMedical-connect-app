@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import BottomNavigation from '@/components/layout/BottomNavigation';
 import DashboardCard from '@/components/dashboard/DashboardCard';
 import { Button } from '@/components/ui/button';
-import { Calendar, TestTube, Bell, User, Clipboard, Search, Activity } from 'lucide-react';
+import { Calendar, TestTube, Bell, User, Clipboard, Search, Activity, FlaskConical } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
   const userName = "Jacky"; // Changed from "Juan" to "Jacky"
@@ -47,6 +47,14 @@ const Dashboard: React.FC = () => {
             icon={<Calendar className="h-6 w-6" />}
             path="/appointments"
             color="purple"
+          />
+          
+          <DashboardCard
+            title="Análisis"
+            description="Búsqueda de pruebas de laboratorio y precios"
+            icon={<FlaskConical className="h-6 w-6" />}
+            path="/laboratory-tests"
+            color="blue"
           />
           
           <DashboardCard

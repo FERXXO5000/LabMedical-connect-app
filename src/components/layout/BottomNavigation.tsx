@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, Calendar, TestTube, User, Bell } from 'lucide-react';
+import { Home, Calendar, TestTube, User, Bell, FlaskConical } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const BottomNavigation: React.FC = () => {
@@ -11,8 +11,8 @@ const BottomNavigation: React.FC = () => {
   const navItems = [
     { label: 'Inicio', icon: Home, path: '/dashboard' },
     { label: 'Citas', icon: Calendar, path: '/appointments' },
+    { label: 'Análisis', icon: FlaskConical, path: '/laboratory-tests' },
     { label: 'Resultados', icon: TestTube, path: '/test-results' },
-    { label: 'Alertas', icon: Bell, path: '/notifications' },
     { label: 'Perfil', icon: User, path: '/profile' },
   ];
   

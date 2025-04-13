@@ -13,6 +13,7 @@ import TestResults from "./pages/TestResults";
 import Notifications from "./pages/Notifications";
 import NotFound from "./pages/NotFound";
 import AppointmentForm from "./components/appointments/AppointmentForm";
+import LaboratoryTests from "./pages/LaboratoryTests";
 
 // Crear una página para crear nueva cita
 const NewAppointment = () => {
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/profile" element={<Profile />} />
           <Route path="/appointments" element={<Appointments />} />
           <Route path="/appointments/new" element={<NewAppointment />} />
+          <Route path="/laboratory-tests" element={<LaboratoryTests />} />
           <Route path="/test-results" element={<TestResults />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="*" element={<NotFound />} />
