@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Menu, UserCircle, Bell, LogOut } from 'lucide-react';
@@ -15,7 +14,7 @@ interface NavbarProps {
   title?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title = 'LabCenter' }) => {
+const Navbar: React.FC<NavbarProps> = ({ title = 'LabMedical' }) => {
   const navigate = useNavigate();
   
   const handleLogout = () => {

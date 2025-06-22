@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-labcenter-purple-light">
       <div className="text-center animate-pulse-slow">
-        <h1 className="text-4xl font-bold mb-4 text-labcenter-purple">LabCenter</h1>
+        <h1 className="text-4xl font-bold mb-4 text-labcenter-purple">LabMedical</h1>
         <p className="text-xl text-labcenter-gray">Cargando la aplicación...</p>
       </div>
     </div>

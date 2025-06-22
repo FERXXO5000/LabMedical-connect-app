@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, TestTube, Bell, User, Clipboard, Search, Activity, FlaskConical } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
-  const userName = "Jacky"; // Changed from "Juan" to "Jacky"
+  const userName = "Jacky";
   
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
             Hola, {userName}
           </h1>
           <p className="text-labcenter-gray">
-            Bienvenido a tu portal de LabCenter
+            Bienvenido a tu portal de LabMedical
           </p>
         </div>
         

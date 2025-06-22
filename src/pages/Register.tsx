@@ -13,7 +13,7 @@ const Register: React.FC = () => {
               <TestTube className="h-8 w-8 text-white" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-labcenter-purple mb-2">LabCenter</h1>
+          <h1 className="text-3xl font-bold text-labcenter-purple mb-2">LabMedical</h1>
           <p className="text-labcenter-gray">Gestión y resultados de laboratorio</p>
         </div>
         
