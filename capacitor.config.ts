@@ -2,8 +2,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'app.lovable.44bcd04b839f473a94611d434f58db89',
-  appName: 'labcenter-connect-app',
+  appId: 'app.labmedical.44bcd04b839f473a94611d434f58db89',
+  appName: 'labmedical-connect-app',
   webDir: 'dist',
   server: {
     url: 'https://44bcd04b-839f-473a-9461-1d434f58db89.lovableproject.com?forceHideBadge=true',
